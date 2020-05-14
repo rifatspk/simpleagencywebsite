@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Name</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="headerclass">
+        <h2>
+            <a href="/">Company Name</a>
+        </h2>
+        <div class="mobile-btn"><i class="fas fa-bars"></i></div>
+
+        <nav>
+            <li><a href="/">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contacts</a></li>
+        </nav>
+    </header>
+    <section class="banner-area">
+        <div class="banner-img"></div>
+        <h1>Welcome To Our Website</h1>
+        <h3>We Build Premium Quality Website</h3>
+        <a href="#contact" class="banner-btn">Contacts Us</a>
+    </section>
+    <section class="about-area" id="about">
+        <h3 class="section-title">
+            About Us
+        </h3>
+        <ul class="about-content">
+            <li class="about-left"></li>
+            <li class="about-right">
+                <h2>About Our Company</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum rerum assumenda iure, quo neque
+                    corporis possimus distinctio pariatur quas ipsum minus! Sed neque odio et.</p>
+                <a href="" class="about-btn">Learn More</a>
+            </li>
+        </ul>
+    </section>
+
+    <section class="service-area" id="services">
+        <h3 class="section-title">Services</h3>
+        <ul class="services-content">
+            <li>
+                <i class="fa fa-laptop"></i>
+                <h4>Web Design</h4>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta explicabo asperiores neque labore,
+                    voluptatum ex.</p>
+            </li>
+            <li>
+                <i class="fa fa-signal"></i>
+                <h4>Digital Marketing</h4>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta explicabo asperiores neque labore,
+                    voluptatum ex.</p>
+            </li>
+            <li>
+                <i class="fa fa-picture-o"></i>
+                <h4>Graphics</h4>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta explicabo asperiores neque labore,
+                    voluptatum ex.</p>
+            </li>
+        </ul>
+    </section>
+    <section class="contact-area" id="contact">
+        <h3 class="section-title">Contact</h3>
+        <ul class="contact-content">
+            <li>
+                <i class="fa fa-map-marker"></i>
+                <p>1727 Bell Street<br> New York, USA</p>
+            </li>
+            <li>
+                <i class="fa fa-phone"></i>
+                <p>+8811233014213 <br> +8801022165221</p>
+            </li>
+            <li>
+                <i class="fa fa-envelope"></i>
+                <p>info@yourcomany.com<br>admin@yourdomain.com</p>
+            </li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>All Rights Reserved by Your Company Name</p>
+    </footer>
+    <script src="js/script.js" type="text/javascript"></script>
+    <script>
+        window.onscroll = function () {
+            scrollFunction()
+        };
+        var mobilebtn = document.querySelector('.mobile-btn');
+        var mobilebtni = document.querySelector('.mobile-btn i');
+        var nav = document.querySelector('nav');
+        var header = document.querySelector('.headerclass');
+
+        mobilebtn.onclick = function () {
+            if (nav) {
+                mobilebtni.classList.toggle('fa-times');
+                nav.classList.toggle('toggle');
+            }
+        }
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+                header.classList.add('shrink');
+            } else {
+                header.classList.remove('shrink');
+            }
+
+        }
+    </script>
+</body>
+
+</html>
